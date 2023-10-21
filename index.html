@@ -20,12 +20,6 @@
         padding-right: 200px;
     }
 
-    body>h1 {
-        /* text-align: center; */
-
-
-    }
-
     p {
         background-color: unset !important;
         font-size: 18px;
@@ -34,20 +28,21 @@
 </style>
 
 <body>
-    <div class="container text-uppercase text-white  ">
-        <h1 class="mt-1  display-h1 text-center">weather tmplate</h1>
-        <div class="row p-5 gap-5">
-            <div class="container col  bg-white-opc text-center  ">
+    
+        <h1 class="mt-1  display-h1 text-center text-white text-uppercase">weather tmplate</h1>
+
+        <div class="bg-primary row mt-4 text-uppercase text-white text-center">
+            <div class="container  col-lg col-md-12 mb-5 bg-white-opc text-center  ">
                 <div class="row mb-3 border-bottom ms-3 me-3">
                     <h4 class="font-white mt-3">local weather report</h4>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12">
                         <img id="img-head" class="img-fluid mt-3" width="130px" height="130px"
                             src="./assets/img/sun.png">
                         <h5 id="temp-head" class="mt-5 mb-5">71.6 ْ f</h5>
                     </div>
-                    <div class="col-6 flex-column d-flex justify-content-around">
+                    <div class="col-md-6 col-sm-12 flex-column d-flex justify-content-around">
                         <div>
                             <h3 id="day-head" class="text-uppercase mt-4 ">sunday</h3>
                             <h5 id="state-head" class="text-uppercase mt-3">suny</h5>
@@ -59,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container col bg-white-opc text-center ">
+            <div class="container  col-lg offset-lg-1 col-md-12 mb-5  bg-white-opc text-center ">
                 <div class="row mb-3 border-bottom ms-3 me-3">
                     <h3 class="font-white">local weather report</h3>
                 </div>
@@ -70,7 +65,7 @@
                 <h5 class=" mt-3 ">sunday --------------1424526523762</h5>
             </div>
         </div>
-        <div class="row bg-white-opc text-center">
+        <div class="row bg-white-opc text-center text-uppercase text-white">
             <div class="col flex-column d-flex justify-content-between mt-2">
                 <div>
                     <h4 class="day">sunday</h4>
@@ -137,68 +132,11 @@
             </div>
 
         </div>
-    </div>
+    
 
     <script src="bootstrap-5.3.2/dist/js/bootstrap.js">
     </script>
-    <script>
-        let arr = [
-            {
-                image: "./assets/img/Cloud.png",
-                day: "sturday",
-                degree: "22 ْ C"
-            },
-            {
-                image: "./assets/img/rain.png",
-                day: "sunday",
-                degree: "40 ْ C"
-            },
-            {
-                image: "./assets/img/RainThunder.png",
-                day: "monday",
-                degree: "28 ْ C"
-            },
-            {
-                image: "./assets/img/Snow.png",
-                day: "tuesday",
-                degree: "28 ْ C"
-            },
-            {
-                image: "./assets/img/sun.png",
-                day: "wednesday",
-                degree: "44 ْ C"
-            },
-            {
-                image: "./assets/img/SunCloud.png",
-                day: "thursday",
-                degree: "30 ْ C"
-            },
-        ]
-        const images = document.querySelectorAll('.img-card');
-        const days = document.querySelectorAll('.day');
-        const temps = document.querySelectorAll('.temp');
-        let index = 0;
-        let randomNumber = Math.floor(Math.random() * 6);
-        document.getElementById('img-head').src = arr[randomNumber].image;
-        document.getElementById('temp-head').textContent = arr[randomNumber].degree;
-        document.getElementById('day-head').textContent = arr[randomNumber].day;
-        for (let i = randomNumber + 1; i < arr.length; i++) {
-            images[index].src = arr[i].image;
-            days[index].textContent = arr[i].day;
-            temps[index].textContent = arr[i].degree;
-            index++;
-        }
-        for(let i=0;i<randomNumber;i++)
-        {  images[index].src = arr[i].image;
-            days[index].textContent = arr[i].day;
-            temps[index].textContent = arr[i].degree;
-            index++;
-        }
-
-
-
-
-    </script>
+   <script src="javascrip.js"></script>
 </body>
 
 </html>
